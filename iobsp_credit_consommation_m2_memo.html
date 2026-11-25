@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche mémo — Les formes de crédit et les crédits de trésorerie</title><style>
+:root{--prune:#8C1E70;--prune-fonce:#5E1349;--prune-clair:#F4E6EE;--accent:#C77BAA;
+ --vert:#283C28;--gris:#3C3C3C;--gris-moyen:#8A7A85;--filet:#E8DCE5;--creme:#FAF6F8;
+ --ok:#2F7A4F;--ko:#B23B3B;--amb:#B5852A;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--creme);color:var(--gris);
+ font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.62}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 60px}
+header.bandeau{background:var(--prune-fonce);color:#fff;padding:18px 0;border-bottom:4px solid var(--accent)}
+header.bandeau .wrap{padding-bottom:0}
+.chapitre{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#EAD3E3}
+.chapitre span{color:var(--accent);margin:0 6px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.25;margin:8px 0 4px;color:#fff}
+.sous{color:#EAD3E3;font-size:14.5px;margin:0}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:20px;color:var(--prune-fonce);
+ margin:34px 0 0;padding-bottom:8px;border-bottom:2px solid var(--filet)}
+h2 .num{color:var(--accent);margin-right:8px}
+h3{font-size:15px;color:var(--vert);margin:20px 0 8px;letter-spacing:.02em}
+.carte{background:#fff;border:1px solid var(--filet);border-radius:10px;padding:20px 22px;margin:18px 0;
+ box-shadow:0 1px 2px rgba(94,19,73,.05)}
+.enc{background:var(--prune-clair);border-left:5px solid var(--prune);padding:14px 18px;
+ border-radius:0 8px 8px 0;margin:18px 0;font-size:15.2px}
+.enc .t{display:block;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+ font-weight:800;color:var(--prune-fonce);margin-bottom:6px}
+.enc.al{background:#FBF4F4;border-left-color:var(--ko)}.enc.al .t{color:var(--ko)}
+.enc.ci{background:#FCF8F0;border-left-color:var(--amb)}.enc.ci .t{color:#8A6418}
+.situ{background:#FCF9FB;border:1px dashed var(--filet);border-radius:8px;padding:16px 18px;margin:16px 0;font-size:15.2px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}
+.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:7px;font-size:14.5px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.quad>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:12px 13px;font-size:13.6px}
+.quad .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13px;
+ text-transform:uppercase;letter-spacing:.04em}
+.tri .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;
+ text-transform:uppercase;letter-spacing:.05em}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.8px;background:#fff}
+th,td{border:1px solid var(--filet);padding:9px 12px;text-align:left}
+thead th{background:var(--prune-clair);color:var(--prune-fonce);font-size:13.5px}
+tbody th{font-weight:600;color:var(--gris)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td,tr.tot th{background:#FBF3F8;font-weight:800;color:var(--prune-fonce)}
+.dl{display:inline-flex;align-items:center;gap:9px;background:var(--prune);color:#fff;text-decoration:none;
+ padding:11px 20px;border-radius:8px;font-weight:700;font-size:15px;margin:20px 0 4px}
+.dl:hover{background:var(--prune-fonce)}
+ol.q{padding-left:0;list-style:none;counter-reset:q}
+ol.q>li{margin:16px 0;padding-left:38px;position:relative}
+ol.q>li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:1px;
+ width:26px;height:26px;border-radius:50%;background:var(--prune-clair);color:var(--prune-fonce);
+ font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+b,strong{color:var(--vert)}
+footer{text-align:center;font-size:12.5px;color:var(--gris-moyen);padding:26px 18px 12px;
+ border-top:1px solid var(--filet);margin-top:44px}
+@media(max-width:860px){.quad{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.duo,.tri,.quad{grid-template-columns:1fr}h1{font-size:22px}}
+@media print{body{background:#fff}.dl{display:none}header.bandeau{background:#5E1349 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+td{vertical-align:top}td:first-child{white-space:nowrap}.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}.tri .h,.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;text-transform:uppercase;letter-spacing:.05em}.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}@media(max-width:640px){.tri,.duo{grid-template-columns:1fr}}.enc,tr,.tri,.duo{break-inside:avoid}
+.enc p,.cols p{margin:6px 0}.enc.ok{background:#F1F7F3;border-left-color:var(--ok)}.enc.ok .t{color:var(--ok)}
+.cols{display:grid;gap:14px;margin:16px 0}.cols.c2{grid-template-columns:1fr 1fr}.cols.c3{grid-template-columns:repeat(3,1fr)}.cols.c4{grid-template-columns:repeat(4,1fr)}.cols.c5,.cols.c6{grid-template-columns:repeat(3,1fr)}
+.cols>div>.enc{margin:0;height:100%}.cols table{margin:0}
+p.src{font-size:12.5px;color:var(--gris-moyen);line-height:1.5}
+td,th{vertical-align:top}
+@media(max-width:760px){.cols.c2,.cols.c3,.cols.c4,.cols.c5,.cols.c6{grid-template-columns:1fr}}
+table.frise{table-layout:fixed;font-size:13px}.enc h3{margin:2px 0 8px;font-family:Georgia,serif;color:var(--prune-fonce);font-size:16px}
+.cols>div>.enc{margin:0}
+</style></head><body>
+<header class="bandeau"><div class="wrap"><div class="chapitre">IOBSP NIVEAU 2 · BLOC 2 · JOURNÉE 3 — MODULE 2</div><h1>Les formes de crédit et les crédits de trésorerie</h1><p class="sous">Fiche mémo — cinq formes · régime applicable à compter du 20 novembre 2026</p></div></header>
+<main class="wrap"><a class="dl" href="J3_M2_Fiche_memo.pdf" download>⬇ Télécharger la fiche mémo (PDF)</a>
+<h2>1 · Les cinq formes en un tableau</h2>
+<table><thead><tr><th><b>Forme</b></th><th><b>Mécanisme</b></th><th><b>Point de droit décisif</b></th><th><b>Quand la proposer</b></th></tr></thead><tbody><tr><td><b>Prêt personnel</b></td><td>Somme versée, fonds libres d&#x27;emploi, échéances fixes</td><td>Contrat isolé: aucune interdépendance. La défaillance d&#x27;un vendeur est sans effet sur le crédit</td><td>Besoin ponctuel et chiffré, sans achat déterminé</td></tr><tr><td><b>Crédit affecté</b></td><td>Finance un bien ou une prestation déterminés</td><td><b>Interdépendance</b> avec le contrat financé — voir section 2</td><td>Dès qu&#x27;un achat déterminé est financé. C&#x27;est la forme qui protège</td></tr><tr><td><b>Crédit renouvelable</b></td><td>Réserve utilisée librement, reconstituée au fil des remboursements</td><td>Contrat d&#x27;un an reconductible · amortissement minimal obligatoire — voir section 3</td><td>Besoin récurrent et imprécis, en mesurant le coût de la souplesse</td></tr><tr><td><b>Location avec option</b> <b>d&#x27;achat</b></td><td>Loyers pour l&#x27;usage, option d&#x27;acquisition en fin de contrat</td><td>Le critère est <b>l&#x27;option d&#x27;achat</b>. Sans option, simple location, hors du champ</td><td>Usage recherché plutôt que propriété — présenter le coût total</td></tr><tr><td><b>Crédits de trésorerie</b></td><td>Découvert autorisé, facilité de caisse, dépassement</td><td>Entrée complète dans le régime au 20/11/2026 — voir section 5</td><td>Décalage de trésorerie de quelques jours. Jamais un besoin durable</td></tr></tbody></table>
+<h2>2 · L&#x27;interdépendance du crédit affecté</h2>
+<p>Le crédit affecté est juridiquement rattaché au contrat de vente ou de prestation qu&#x27;il finance. Quatre effets en découlent, et ils tombent régulièrement à l&#x27;examen:</p>
+<table><thead><tr><th><b>Effet</b></th><th><b>Portée</b></th></tr></thead><tbody><tr><td><b>Résolution de plein droit</b></td><td>Le crédit est résolu ou annulé de plein droit lorsque le contrat principal l&#x27;est</td></tr><tr><td><b>Obligations différées</b></td><td>Les obligations de l&#x27;emprunteur ne prennent effet qu&#x27;à compter de la <b>livraison</b> du bien ou de la fourniture de la prestation</td></tr><tr><td><b>Suspension judiciaire</b></td><td>Si le vendeur n&#x27;exécute pas ses obligations, l&#x27;emprunteur peut demander en justice la suspension du crédit</td></tr><tr><td><b>Rétractation croisée</b></td><td>L&#x27;exercice du droit de rétractation sur le crédit emporte <b>résolution de plein droit de la vente</b></td></tr></tbody></table>
+<div class="enc"><span class="t">LA PHRASE À RETENIR</span><p>Le crédit affecté protège l&#x27;emprunteur contre la défaillance du vendeur; le prêt personnel ne le protège pas. Proposer un prêt personnel pour financer un achat déterminé prive le client de cette protection sans qu&#x27;il le sache. <i>art. L. 312-44 à L. 312-56 C. consom.</i></p></div>
+<h2>3 · Le crédit renouvelable — les chiffres à connaître</h2>
+<table><thead><tr><th><b>Règle</b></th><th><b>Valeur</b></th></tr></thead><tbody><tr><td><b>Durée du contrat</b></td><td>1 an, reconductible · consultation annuelle du FICP · information en temps utile pour permettre l&#x27;opposition</td></tr><tr><td><b>Amortissement minimal</b></td><td><b>36 mois</b> si le montant total est ≤ 3 000 € · <b>60 mois</b> au-delà. Chaque échéance comprend un remboursement minimal du capital</td></tr><tr><td><b>Proposition d&#x27;alternative</b></td><td>Au-delà de <b>1 000 €</b> sur le lieu de vente ou à distance: proposition obligatoire d&#x27;un crédit amortissable, comparable sur au moins deux hypothèses de délai</td></tr><tr><td><b>Carte de crédit</b></td><td>Mention « carte de crédit» visible · avantages commerciaux non subordonnés à l&#x27;utilisation du crédit</td></tr><tr><td><b>Droits de l&#x27;emprunteur</b></td><td>S&#x27;opposer à la reconduction · réduire la réserve · suspendre son droit d&#x27;utilisation · résilier</td></tr></tbody></table>
+<div class="enc"><span class="t">LES LEURRES À ÉCARTER</span><p><b>48 mois</b> n&#x27;est pas une durée légale — elle sonne juste parce qu&#x27;elle est intermédiaire. <b>5 000 €</b> n&#x27;est pas le seuil de bascule: le seuil est de 3 000 €. Et le seuil de la proposition d&#x27;alternative est de 1 000 €, pas de 3 000 €. <i>art. L. 312-57 et s., L. 312-62, D. 312-21 et s. C. consom.</i></p></div>
+<h2>4 · La location avec option d&#x27;achat</h2>
+<p>Le professionnel reste propriétaire; le client verse des loyers pour l&#x27;usage et peut acquérir le bien en levant l&#x27;option contre la valeur de rachat. <b>Le</b> <b>critère de qualification est l&#x27;existence de l&#x27;option</b>: avec option, financement; sans option, simple location hors du champ.</p>
+<div class="enc"><span class="t">CALCULER LE COÛT RÉEL</span><p>Coût total = <b>premier versement + total des loyers + valeur de rachat</b>.<br>Exemple: 3 000 € + (36 × 249 €) + 6 500 € = <b>18 464 €</b>, contre 16 900 € au comptant, soit 1 564 € de coût de financement. Option non levée: 11 964 € versés sans propriété.<br>Un loyer et une mensualité de crédit ne sont pas comparables: le premier paie l&#x27;usage, la seconde l&#x27;acquisition. <i>art. L. 312-14 C. consom. —</i></p><p><i>explications adéquates</i></p></div>
+<h2>5 · Les crédits de trésorerie</h2>
+<table><thead><tr><th><b>Situation</b></th><th><b>Définition</b></th></tr></thead><tbody><tr><td><b>Autorisation de découvert</b></td><td>Autorisation expresse de rendre le compte débiteur dans une limite convenue. C&#x27;est un contrat de crédit</td></tr><tr><td><b>Facilité de caisse</b></td><td>Découvert de courte durée absorbant un décalage entre dépenses et rentrées</td></tr><tr><td><b>Dépassement</b></td><td>Solde débiteur excédant l&#x27;autorisation, ou apparaissant sans autorisation. Toléré de fait, non accordé</td></tr></tbody></table>
+<table><thead><tr><th></th><th><b>Jusqu&#x27;au 19 novembre 2026</b></th><th><b>À compter du 20 novembre 2026</b></th></tr></thead><tbody><tr><td><b>Découverts &lt; 200 € ou &lt; 1 mois</b></td><td>Hors du régime complet — la « zone grise»</td><td><b>Dans le régime</b>, quels que soient montant et durée</td></tr><tr><td><b>Évaluation de la solvabilité</b></td><td>Non requise dans la zone grise</td><td>Obligatoire, <b>proportionnée</b> au montant et à la durée</td></tr><tr><td><b>Information précontractuelle</b></td><td>Allégée ou absente</td><td>Due, comme pour tout crédit à la consommation</td></tr></tbody></table>
+<div class="enc al"><span class="t">TROIS ERREURS À NE JAMAIS COMMETTRE DEVANT UN CLIENT</span><p>• « La réforme supprime le découvert» — <b>faux</b>. Elle le documente. Le découvert n&#x27;a jamais été un droit: il repose sur l&#x27;accord de<br>l&#x27;établissement.<br>• « Les découverts de moins de 200 € restent hors du régime» — <b>faux</b> à compter du 20 novembre 2026.<br>• « Votre découvert actuel est à l&#x27;abri du nouveau droit» — <b>inexact</b>. Le découvert est un crédit à durée indéterminée, et certaines règles nouvelles s&#x27;appliquent aussi aux contrats en cours.<br>Résiliation d&#x27;un découvert existant: possible, pour des motifs objectivement justifiés et avec préavis. <i>ord. n° 2025-880 du 3 septembre 2025 · art. L.</i></p><p><i>312-93 et s. C. consom.</i></p></div>
+<h2>6 · L&#x27;arbre de décision</h2>
+<div class="enc"><p><b>1. Le crédit finance-t-il un achat déterminé ?</b><br>Oui → <b>crédit affecté</b>, seule forme qui lie le sort du crédit à celui de l&#x27;achat. Ne pas passer à côté de cette question.</p><p><b>2. Le besoin est-il ponctuel et chiffré, ou récurrent et imprécis ?</b><br>Ponctuel et chiffré → <b>prêt personnel</b>: montant, durée et échéance connus d&#x27;avance.<br>Récurrent et imprécis → réserve possible, mais mesurer le coût de la souplesse.</p><p><b>3. Le client veut-il la propriété, ou l&#x27;usage ?</b><br>L&#x27;usage → <b>LOA</b>, en présentant le coût total et non le seul loyer.<br>La propriété d&#x27;emblée → crédit affecté, plus simple et souvent moins coûteux.</p><p><b>4. S&#x27;agit-il d&#x27;un décalage de trésorerie, ou d&#x27;un besoin de financement ?</b><br>Décalage de quelques jours → <b>découvert autorisé</b>, formalisé.<br>Besoin durable → <b>jamais du découvert</b>. Un client vivant en permanence sur son autorisation n&#x27;a pas besoin de trésorerie: sa situation doit être examinée.</p></div>
+<div class="enc ok"><p><b>CE QUI TOMBE À L&#x27;EXAMEN</b></p><p>• Les quatre effets de l&#x27;interdépendance du crédit affecté.<br>• 36 mois jusqu&#x27;à 3 000 €, 60 mois au-delà. Seuil de 1 000 € pour la proposition d&#x27;un crédit amortissable.<br>• Le critère de la LOA est l&#x27;option d&#x27;achat. Coût réel = versement initial + loyers + valeur de rachat.<br>• Fin de la zone grise des découverts de moins de 200 € ou de moins d&#x27;un mois au 20 novembre 2026.<br>• Partir du besoin exprimé pour en déduire la forme, jamais l&#x27;inverse.</p></div>
+<p><i>Sources: code de la consommation, art. L. 312-1 et s., L. 312-14, L. 312-44 à L. 312-56, L. 312-57 à L. 312-83, L. 312-62, L. 312-93 et s., L. 341-19 et s., D. 312-21 à D. 312-31 ·</i> <i>directive (UE) 2023/2225 du 18 octobre 2023 (CCD2) · ordonnance n° 2025-880 du 3 septembre 2025 (entrée en vigueur le 20 novembre 2026) · ordonnance n° 2025-1154 du 2</i> <i>décembre 2025 · arrêté du 18 juillet 2022, annexe A, point B.1. Les seuils réglementaires (3 000 € / 36 mois / 60 mois / 1 000 €) sont à revérifier avant diffusion.</i></p>
+</main>
+<footer>TMK Performances - N° Siret : 49841924100027 - Code NAF : 8559A</footer>
+</body></html>
